@@ -3,7 +3,7 @@ import pyodbc as pdb
 
 from myIP import MYIP
 
-server = '192.168.0.112'
+server = '192.168.182.23'
 database = 'FlightsAndDelays'
 UID = 'sa'
 PWD = 'Eriktruls@99'

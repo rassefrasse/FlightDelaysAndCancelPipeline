@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 src_engine = engine
-ip = '192.168.0.112'
+ip = '192.168.182.23'
 flights_query = """
     SELECT 
         YEAR, MONTH, DAY, DAY_OF_WEEK, AIRLINE, FLIGHT_NUMBER, TAIL_NUMBER,
@@ -47,7 +47,7 @@ for table, query in table_queries.items():
                     chunk[col].fillna('', inplace=True)
                 elif chunk[col].dtype in ['int64', 'float64']:
                     chunk[col].replace('', np.nan, inplace=True)
-                    
+
         elif table == 'Airlines' or table == 'Airports':
             chunk.fillna('', inplace=True)
 
